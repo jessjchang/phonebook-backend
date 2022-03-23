@@ -41,7 +41,7 @@ app.get('/api/persons/:id', (request, response, next) => {
       } else {
         response.status(404).end()
       }
-  })
+    })
     .catch(error => next(error))
 })
 
@@ -75,9 +75,9 @@ app.put('/api/persons/:id', (request, response, next) => {
 app.post('/api/persons', (request, response, next) => {
   const body = request.body
 
-  Person.findOne({name: body.name, number: body.number}, (err, example) => {
+  Person.findOne({ name: body.name, number: body.number }, (err, example) => {
     if (err) {
-     next(err)
+      next(err)
     } else if (example) {
       next('DuplicateEntry')
     }
@@ -109,7 +109,7 @@ const errorHandler = (error, request, response, next) => {
   } else if (error.name === 'ValidationError') {
     return response.status(400).json({ error: error.message })
   } else if (error === 'DuplicateEntry') {
-    return response.status(400).json({ error: 'Contact already exists in phonebook'})
+    return response.status(400).json({ error: 'Contact already exists in phonebook' })
   }
 
   next(error)
