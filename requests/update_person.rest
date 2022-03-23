@@ -1,0 +1,42 @@
+PUT http://localhost:3001/api/persons/623993a74bcd24e938c68640
+Content-Type: application/json
+
+{
+  "number": "222-111-1111"
+}
+
+###
+GET http://localhost:3001/api/persons
+
+###
+PUT http://localhost:3001/api/persons/623993a74bcd24e938c68640
+Content-Type: application/json
+
+{
+  "name": "lo",
+  "number": "222-222-1111"
+}
+
+###
+PUT http://localhost:3001/api/persons/623993a74bcd24e938c68640
+Content-Type: application/json
+
+{
+  "number": "1-22334455"
+}
+
+###
+PUT http://localhost:3001/api/persons/623993a74bcd24e938c68640
+Content-Type: application/json
+
+{
+  "number": "10-22-334455"
+}
+
+###
+PUT http://localhost:3001/api/persons/623993a74bcd24e938c68640
+Content-Type: application/json
+
+{
+  "number": "10-a1234567"
+}
